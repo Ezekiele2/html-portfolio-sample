@@ -1,0 +1,128 @@
+/* Import main styles */
+@import url('styles.css');
+
+/* Navigation Container */
+.nav-container {
+    background-color: var(--background-nav-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+/* Toggle */
+.nav-toggle {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Navigation Menu */
+.nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 120px;
+}
+
+.nav.open {
+    display: block;
+}
+
+/* Navigation Links */
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    padding: 10px 20px;
+}
+
+.nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.nav ul li:hover {
+    background-color: #e0e0e0;
+}
+
+/* User Profile */
+.user-profile {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Switch */
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    --size-of-icon: 1.4em;
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #303136;
+}
+
+input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}

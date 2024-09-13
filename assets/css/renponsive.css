@@ -1,0 +1,53 @@
+/* Responsive styles */
+@import url('styles.css');
+
+@media (max-width: 768px) {
+    .welcome-content h1 {
+        font-size: 1em;
+    }
+
+    .welcome-content h2 {
+        font-size: 1.1em;
+    }
+
+    .welcome-content p {
+        font-size: 0.9em;
+    }
+
+    .welcome-content .btn {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcome-hero {
+        padding: 0 10px;
+    }
+
+    .welcome-content {
+        max-width: 100%;
+    }
+
+    .welcome-content h1 {
+        font-size: 0.8em;
+    }
+
+    .welcome-content h2 {
+        margin-top: 18px;
+        font-size: 0.8em;
+    }
+
+    .welcome-content p {
+        margin: 20px;
+        font-size: 0.7em;
+    }
+
+    .welcome-content .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .welcome-content .btn {
+        padding: 6px 12px;
+    }
+}

@@ -1,0 +1,72 @@
+/* Dark Mode Variables */
+body.dark-mode {
+    --primary-color: #fff;
+    --secondary-color: #ccc;
+    --background-color: #0e0d0d;
+    --font-color: #fff;
+    --font-blck-color: #0f0f0f;
+    --dot-color: rgba(99, 95, 95, 0.2);
+    --hover-background-color: #555;
+}
+
+/* Dark Mode Body */
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    background-image: 
+        linear-gradient(to bottom, var(--background-color), transparent),
+        radial-gradient(var(--dot-color) 1px, transparent 1px);
+}
+
+/* Dark Mode Navigation */
+body.dark-mode .nav-container {
+    background-color: transparent;
+}
+
+body.dark-mode .nav ul li a {
+    color: var(--font-color);
+}
+
+/* Dark Mode Education Section */
+body.dark-mode .edu-content {
+    background-color: var(--font-blck-color);
+    color: var(--font-color);
+}
+
+body.dark-mode .edu-content h2,
+body.dark-mode .edu-content h3,
+body.dark-mode .edu-content h4,
+body.dark-mode .edu-content h5,
+body.dark-mode .edu-content p {
+    color: var(--font-color);
+}
+
+body.dark-mode .btn {
+    background-color:var(--primary-color);
+    color: var(--font-blck-color);
+}
+
+body.dark-mode .edu-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(194, 192, 192, 0.925);
+}
+
+/* Dark Mode Footer */
+body.dark-mode .footer-container {
+    background-color: var(--dark-background-color);
+}
+
+body.dark-mode .footer {
+    color: var(--dark-font-color);
+}
+
+body.dark-mode .footer .social-links a {
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode .footer .social-links .link:hover {
+    color: green;
+}
+body.dark-mode p{
+    color:  var(--primary-color);
+}
